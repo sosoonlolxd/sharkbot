@@ -180,4 +180,5 @@ async def embed_title(ctx, *,rea=None):
     await ctx.send('embed title set')
 
 #хуйня
-client.run('NzM2MTYwNjUyODkyMzA3NTE4.XxqxCA.esjD0_-UAC97kYf8ewtsxu9hQdA')
+token = open('token.txt', 'r').readline()
+client.run (token)
