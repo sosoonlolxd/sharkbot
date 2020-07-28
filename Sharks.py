@@ -180,4 +180,4 @@ async def embed_title(ctx, *,rea=None):
     await ctx.send('embed title set')
 
 #хуйня
-client.run('NzM2MTYwNjUyODkyMzA3NTE4.XxqxCA.t0M7t2MLuB5HaRizzx9LjJ-iTzw')
+client.run('NzM2MTYwNjUyODkyMzA3NTE4.XxqxCA.esjD0_-UAC97kYf8ewtsxu9hQdA')
