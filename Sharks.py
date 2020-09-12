@@ -179,6 +179,30 @@ async def embed_title(ctx, *,rea=None):
     print(embed_title_dict[ctx.message.author.id])
     await ctx.send('embed title set')
 
+@client.command()
+@commands.has_permissions(administrator=True)
+async def unban(ctx, *, member):
+	await ctx.channel.purge(limit=1)
+
+	channel = client.get_channel(669171863179493386)
+
+	banned_users = await ctx.guild.bans()
+
+	for ban_entry in banned_users:
+		user = ban_entry.user
+
+		await ctx.guild.unban(user)
+
+		emb = discord.Embed(title='Информация о разбаненом участнике', description=f'{ member.name }, был разблокирован по решению администрации',color=0xc25797)
+
+		emb.set_author(name=member.name, icon_url=member.avatar_url)
+		emb.field(name=f'ID: { member.id }', value=f'Name: { member }')
+		emb.set_footer(text=f'Был разблокирован администратором { ctx.author.name }', icon_url=ctx.author.avatar_url)
+
+		await ctx.send(embed=emb)
+
+		return
+
 #хуйня
 token = open('token.txt', 'r').readline()
 client.run (token)
