@@ -6,7 +6,7 @@ embed_title_dict = {1:""}
 @client.event
 async def on_ready():
 	print('Ready')
-	await client.change_presence( status = discord.Status.do_not_disturb, activity = discord.Game("варит мет..."))
+	await client.change_presence( status = discord.Status.do_not_disturb, activity = discord.Game("Dreaming ..."))
 
 #Kick
 @client.command()
